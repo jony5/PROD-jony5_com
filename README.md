@@ -1,11 +1,11 @@
 # JONY5 :: Website Configuration Instructions
 ### Difficulty Level :: Beginner (takes me 10-20 min + FTP time for 1.3GB)
 
-#### *Note: For simplicity of instruction, this configuration README expects the files to run from the root web directory of a subdomain or primary domain. The files can be placed deeper in the directory structure, but no instruction will be given here for that kind of implementation.
+##### Note: For simplicity of instruction, this configuration README expects the files to run from the root web directory of a subdomain or primary domain. The files can be placed deeper in the directory structure, but no instruction will be given here for that kind of implementation.
 
-#### *Note: Total file size is about 1.34GB with over 50% (862.2MB) from 3400+ rotating JPG images from jony5_files/common/imgs/banner_1180x250/. DON'T delete any PHP files here. Delete some of those JPG, if you lack sufficient server hard drive space. I deleted all but 16 banner JPG images, and the total file size dropped to 486.9MB.
+##### Note: Total file size is about 1.34GB with over 50% (862.2MB) from 3400+ rotating JPG images from jony5_files/common/imgs/banner_1180x250/. DON'T delete any PHP files here. Delete some of those JPG, if you lack sufficient server hard drive space. I deleted all but 16 banner JPG images, and the total file size dropped to 486.9MB.
 
-#### *Note: The Wordpress blog UI is busted. Sorry! New site is in the works, tho.  :)
+##### Note: The Wordpress blog UI is busted. Sorry! New site is in the works, tho.  :)
 
 ## INSTRUCTIONS :: 
 **1)** Download this repository.
@@ -34,17 +34,29 @@
 **8)** Update _crnrstn.config.inc.php lines 260 to 272 to match the domain, IP, and path values of the website production environment. Heads up, people...I always screw up the server value for DOCUMENT_ROOT, and the site breaks (same issue as in step 7 due to my dev setup). Also, DON'T add a trailing slash IF there is no slash (and vice-versa). OK. Lines reproduced below for reference:
 
 > $oCRNRSTN->defineEnvResource('CYEXX_SOLUTIONS', 'DOMAIN', 'github.jony5.com');
+
 > $oCRNRSTN->defineEnvResource('CYEXX_SOLUTIONS', 'SERVER_NAME', 'github.jony5.com');
+
 > $oCRNRSTN->defineEnvResource('CYEXX_SOLUTIONS', 'SERVER_ADDR', '162.241.252.206');
+
 > $oCRNRSTN->defineEnvResource('CYEXX_SOLUTIONS', 'SERVER_PORT', '80');
+
 > $oCRNRSTN->defineEnvResource('CYEXX_SOLUTIONS', 'SERVER_PROTOCOL', 'HTTP/1.1');
+
 > $oCRNRSTN->defineEnvResource('CYEXX_SOLUTIONS', 'SSL_ENABLED', false);
+
 > $oCRNRSTN->defineEnvResource('CYEXX_SOLUTIONS', 'DOCUMENT_ROOT', '/home2/jonyfivc/public_html/github.jony5.com');
+
 > $oCRNRSTN->defineEnvResource('CYEXX_SOLUTIONS', 'DOCUMENT_ROOT_DIR', '');		// FYI, this is for an install deeper than root directory. Use NO trailing slash.
+
 > $oCRNRSTN->defineEnvResource('CYEXX_SOLUTIONS', 'ROOT_PATH_CLIENT_HTTP', 'http://github.jony5.com/');
-> $oCRNRSTN->defineEnvResource('CYEXX_SOLUTIONS', 'ROOT_PATH_CLIENT_HTTP_DIR', '');   // FYI, this is for HTTP access to install deeper than root directory. DO ADD trailing slash.
+
+> $oCRNRSTN->defineEnvResource('CYEXX_SOLUTIONS', 'ROOT_PATH_CLIENT_HTTP_DIR', '');   // FYI, this is for HTTP access to install deeper than root directory. DO ADD trailing slash
+
 > $oCRNRSTN->defineEnvResource('CYEXX_SOLUTIONS', 'PROXY_BANNER_IMAGES_ENDPOINT', 'http://github.jony5.com/common/imgs/banner_1180x250/_proxy_xml_request.php');
+
 > $oCRNRSTN->defineEnvResource('CYEXX_SOLUTIONS', 'WSDL_URI_MGMT', 'http://github.jony5.com/soa/crnrstnmgmt/1.0.0/wsdl/index.php?wsdl');
+
 > $oCRNRSTN->defineEnvResource('CYEXX_SOLUTIONS', 'WSDL_URI', 'http://github.jony5.com/soa/crnrstn/1.0.0/wsdl/index.php?wsdl');
 
 **9)** Save and close _crnrstn.config.inc.php, and then FTP the files to your web server.
