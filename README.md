@@ -62,21 +62,3 @@
 **9)** Save and close _crnrstn.config.inc.php, and then FTP the files to your web server.
 
 **10)** Test the site by loading in web browser. The Wordpress blog UI is busted (no way to fix given my situation...and besides, a new Wordpress compatible site is in the works!), but if the rest works...it works.
-
-# = = = = = = = = = = = = = = = = = = = = 
-## CRON SYN FOR GLOBAL NAVIGATION BASSDRIVE SHOW INFORMATION :: 
-> jony5_files/_cron/bassdrive_sync/?auth=xxxxsecret_keyxxxxx
-
-## THE ACTUAL CRON CALL FROM JONY5 PRODUCTION ::
-> */5	*	*	*	*	/usr/bin/curl http://github.jony5.com/_cron/bassdrive_sync/?auth=xxxxsecret_keyxxxxx > /dev/null 2>&1
-
-# = = = = = = = = = = = = = = = = = = = =
-## PATH TO BASSDRIVE META FILE OVERWRITES FROM CRON FIRE (WRITE PERMISSIONS HERE) ::  
->jony5_files/_proxy/bassdrive_sync/
-
-## FILES THAT ARE UPDATED BY CRON ::
-> jony5_files/_proxy/bassdrive_sync/stream_info.txt
-> jony5_files/_proxy/bassdrive_sync/bassdrive_stats.txt
-> jony5_files/_proxy/bassdrive_sync/bassdrive_broadcast_nation.txt
-
-
